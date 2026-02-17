@@ -45,6 +45,17 @@ You must explain why and ask before doing it.
 
 ---
 
+# Typography
+
+The site uses two fonts:
+
+* **Fenix** — Default font for the rest of the site. Use for all landing content, headings, paragraphs, and UI text. Applied via `font-landing` on the body.
+* **Departure Mono** — Use **only when explicitly mentioned**. Apply via the `font-navbar-title` class. Currently used for the navbar (logo, nav items, buttons).
+
+Do not introduce additional fonts without explicit approval.
+
+---
+
 # Website Goals
 
 The website is not documentation and not an admin panel.

@@ -7,7 +7,7 @@ export function Hero() {
       <h1 className="text-4xl font-bold tracking-tight text-center sm:text-5xl md:text-6xl">
         Go somewhere <GlitchTitle className="font-navbar-title text-[1em]" /> today
       </h1>
-      <p className="mt-4 text-lg text-muted-foreground text-center max-w-xl md:text-xl">
+      <p className="mt-4 text-lg text-blue-600 text-center max-w-xl md:text-xl dark:text-blue-400">
         Your personal AI travel agent to explore, plan, or book trips
       </p>
 

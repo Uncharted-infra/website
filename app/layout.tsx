@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-landing antialiased`}>
         <ThemeProvider>
           <Header />
           <div className="pt-14">{children}</div>

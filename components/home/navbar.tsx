@@ -400,11 +400,14 @@ export function NavbarLogo() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/logo.png"
-        alt="Uncharted"
+        alt=""
         width={32}
         height={32}
         className="block"
       />
+      <span className="font-navbar-title text-lg font-medium tracking-tight">
+        Uncharted
+      </span>
     </a>
   );
 }
@@ -506,7 +509,7 @@ export function Header() {
           <NavbarButton href="/signup" variant="default" className="font-navbar-title rounded-full">
             Get started for free
           </NavbarButton>
-          <DayNightSwitch />
+          <DayNightSwitch className="ml-[15px]" />
         </div>
       </NavBody>
 
