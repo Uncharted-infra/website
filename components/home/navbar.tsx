@@ -8,6 +8,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { DayNightSwitch } from "@/components/ui/DayNightSwitch";
+import { GlitchTitle } from "@/components/ui/glitch-title";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -175,7 +176,7 @@ export function NavItems({ onItemClick }: NavItemsProps) {
                   <NavigationMenuTrigger
                     onMouseEnter={() => setHovered(idx)}
                     className={cn(
-                      "relative rounded-md bg-transparent hover:bg-accent",
+                      "font-navbar-title relative rounded-md bg-transparent hover:bg-accent",
                       hovered === idx && "bg-accent/50"
                     )}
                   >
@@ -188,7 +189,7 @@ export function NavItems({ onItemClick }: NavItemsProps) {
                           <NavigationMenuLink asChild>
                             <Link
                               href={resource.href}
-                              className="block rounded-md px-3 py-2 text-sm hover:bg-accent"
+                              className="font-navbar-title block rounded-md px-3 py-2 text-sm hover:bg-accent"
                               onClick={() => onItemClick?.()}
                             >
                               {resource.name}
@@ -210,7 +211,7 @@ export function NavItems({ onItemClick }: NavItemsProps) {
             href={item.link}
             onMouseEnter={() => setHovered(idx)}
             onClick={(e) => handleClick(e, item)}
-            className="relative rounded-md px-4 py-2 text-black transition-colors hover:text-black/80 dark:text-foreground dark:hover:text-foreground/80"
+            className="font-navbar-title relative rounded-md px-4 py-2 text-black transition-colors hover:text-black/80 dark:text-foreground dark:hover:text-foreground/80"
           >
             {hovered === idx && (
               <motion.div
@@ -391,14 +392,13 @@ export function NavbarLogo() {
   return (
     <a
       href="/"
-      className="relative z-20 flex items-center gap-2 text-sm font-normal transition-opacity hover:opacity-80"
+      className="relative z-20 flex items-center gap-2 transition-opacity hover:opacity-80"
       onClick={(e) => {
         e.preventDefault();
         router.push("/");
       }}
     >
-      <MapPin className="size-5 text-primary" />
-      <span className="font-semibold tracking-tight">Uncharted</span>
+      <GlitchTitle className="font-navbar-title text-[19px] tracking-wider" />
     </a>
   );
 }
@@ -494,11 +494,11 @@ export function Header() {
         <NavbarLogo />
         <NavItems />
         <div className="flex items-center gap-2">
-          <NavbarButton href="/login" variant="ghost">
+          <NavbarButton href="/login" variant="ghost" className="font-navbar-title">
             Sign in
           </NavbarButton>
-          <NavbarButton href="/signup" variant="default" className="rounded-full">
-            Get started
+          <NavbarButton href="/signup" variant="default" className="font-navbar-title rounded-full">
+            Get started for free
           </NavbarButton>
           <DayNightSwitch />
         </div>
@@ -522,13 +522,13 @@ export function Header() {
               type="button"
               onClick={(e) => handleMobileNavClick(e, item.link)}
               onTouchEnd={(e) => handleMobileNavClick(e, item.link)}
-              className="flex w-full items-center rounded-md px-3 py-2.5 text-sm font-medium text-black transition-colors hover:bg-accent dark:text-foreground"
+              className="font-navbar-title flex w-full items-center rounded-md px-3 py-2.5 text-sm font-medium text-black transition-colors hover:bg-accent dark:text-foreground"
             >
               {item.name}
             </button>
           ))}
           <div className="border-t pt-2">
-            <div className="px-3 py-2 text-xs font-semibold text-muted-foreground">
+            <div className="font-navbar-title px-3 py-2 text-xs font-semibold text-muted-foreground">
               Resources
             </div>
             {RESOURCES_ITEMS.map((resource) => (
@@ -537,7 +537,7 @@ export function Header() {
                 type="button"
                 onClick={(e) => handleMobileNavClick(e, resource.href)}
                 onTouchEnd={(e) => handleMobileNavClick(e, resource.href)}
-                className="flex w-full items-center rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
+                className="font-navbar-title flex w-full items-center rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-accent"
               >
                 {resource.name}
               </button>
@@ -547,7 +547,7 @@ export function Header() {
         <div className="mt-4 flex flex-col gap-3 border-t pt-4">
           <Button
             variant="outline"
-            className="w-full"
+            className="font-navbar-title w-full"
             onClick={() => {
               router.push("/login");
               setOpen(false);
@@ -556,7 +556,7 @@ export function Header() {
             Sign in
           </Button>
           <Button
-            className="w-full rounded-full"
+            className="font-navbar-title w-full rounded-full"
             onClick={() => {
               router.push("/signup");
               setOpen(false);

@@ -4,6 +4,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Departure Mono";
+  src:
+    url("/fonts/DepartureMono-Regular.woff2") format("woff2"),
+    url("/fonts/DepartureMono-Regular.woff") format("woff"),
+    url("/fonts/DepartureMono-Regular.otf") format("opentype");
+  font-feature-settings: "locl";
+  font-display: swap;
+}
+
 @theme inline {
     --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
     --radius-sm: calc(var(--radius) - 4px);
@@ -113,6 +123,11 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* Navbar titles only - Departure Mono */
+.font-navbar-title {
+  font-family: "Departure Mono", monospace;
 }
 
 @layer base {
