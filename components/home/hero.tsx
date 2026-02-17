@@ -8,7 +8,7 @@ export function Hero() {
         Go somewhere <GlitchTitle className="font-navbar-title text-[1em]" /> today
       </h1>
       <p className="mt-4 text-lg text-muted-foreground text-center max-w-xl md:text-xl">
-        An AI travel agent to explore, plan, or book trips
+        Your personal AI travel agent to explore, plan, or book trips
       </p>
 
       <div className="w-full mt-10 md:mt-12">

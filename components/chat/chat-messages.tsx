@@ -10,7 +10,7 @@ export function ChatMessages() {
       </div>
       <p className="font-semibold text-foreground text-sm">Go somewhere uncharted</p>
       <p className="text-muted-foreground text-sm leading-relaxed max-w-md mt-1">
-        An AI travel agent to explore, plan, or book trips
+        Your personal AI travel agent to explore, plan, or book trips
       </p>
     </div>
   );
