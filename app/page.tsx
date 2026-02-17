@@ -1,7 +1,11 @@
 import { Hero } from "@/components/home/hero";
-import { ValueProps } from "@/components/home/value-props";
-import { Trust } from "@/components/home/trust";
-import { Cta } from "@/components/home/cta";
+import { SectionExplore } from "@/components/home/section-explore";
+import { SectionPlan } from "@/components/home/section-plan";
+import { SectionBook } from "@/components/home/section-book";
+import { SectionHowItWorks } from "@/components/home/section-how-it-works";
+import { SectionPricing } from "@/components/home/section-pricing";
+import { SectionDemoCta } from "@/components/home/section-demo-cta";
+import { SectionClosing } from "@/components/home/section-closing";
 import { Footer } from "@/components/home/footer";
 
 export default function Home() {
@@ -9,9 +13,13 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <ValueProps />
-        <Trust />
-        <Cta />
+        <SectionExplore />
+        <SectionPlan />
+        <SectionBook />
+        <SectionHowItWorks />
+        <SectionPricing />
+        <SectionDemoCta />
+        <SectionClosing />
       </main>
       <Footer />
     </>
