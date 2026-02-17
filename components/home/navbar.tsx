@@ -8,7 +8,6 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { DayNightSwitch } from "@/components/ui/DayNightSwitch";
-import { GlitchTitle } from "@/components/ui/glitch-title";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -392,13 +391,20 @@ export function NavbarLogo() {
   return (
     <a
       href="/"
-      className="relative z-20 flex items-center gap-2 transition-opacity hover:opacity-80"
+      className="relative z-20 flex items-center gap-2 bg-transparent transition-opacity hover:opacity-80"
       onClick={(e) => {
         e.preventDefault();
         router.push("/");
       }}
     >
-      <GlitchTitle className="font-navbar-title text-[19px] tracking-wider" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/logo.png"
+        alt="Uncharted"
+        width={32}
+        height={32}
+        className="block"
+      />
     </a>
   );
 }

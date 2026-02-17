@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Uncharted",
   description:
     "Plan trips, book travel, and explore the world with your AI travel agent in your pocket.",
+  icons: {
+    icon: "/favicon-32x32.png",
+  },
 };
 
 export default function RootLayout({
