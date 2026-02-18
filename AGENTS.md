@@ -47,7 +47,7 @@ If you believe a design system change is required, you must explain why and ask 
 The site uses two fonts:
 
 **Fenix** — Default font for the site.
-Use for all landing content, headings, paragraphs, and UI text. Applied via `font-landing`.
+Use for all landing content, headings, par agraphs, and UI text. Applied via `font-landing`.
 
 **Departure Mono** — Only for the navbar (logo, nav items, buttons).
 Applied via `font-navbar-title`.
