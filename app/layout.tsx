@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { Header } from "@/components/home/navbar";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import "./globals.css";
 
 const inter = Inter({
@@ -31,8 +32,11 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
-          <Header />
-          <div className="pt-14">{children}</div>
+          <div className="cursor-none">
+            <SmoothCursor />
+            <Header />
+            <div className="pt-14">{children}</div>
+          </div>
         </ThemeProvider>
         <Analytics />
       </body>
