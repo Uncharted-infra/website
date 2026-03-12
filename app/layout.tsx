@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ConditionalLayout } from "@/components/layout/conditional-layout";
+import { SessionProvider } from "@/components/auth/session-provider";
 import { ThemeProvider } from "@/components/ui/ThemeProvider";
-import { Header } from "@/components/home/navbar";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import "./globals.css";
 
 const inter = Inter({
@@ -32,11 +32,9 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ThemeProvider>
-          <div>
-            <SmoothCursor />
-            <Header />
-            <div className="pt-14">{children}</div>
-          </div>
+          <SessionProvider>
+            <ConditionalLayout>{children}</ConditionalLayout>
+          </SessionProvider>
         </ThemeProvider>
         <Analytics />
       </body>
